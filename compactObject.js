@@ -1,7 +1,7 @@
 function compactObject(obj) {
   if (Array.isArray(obj)) {
     return obj.filter(Boolean).map(compactObject);
-  } else if (typeof obj === "object" && obj !== "null") {
+  } else if (typeof obj === "object" && obj !== null) {
     const result = {};
     for (let key in obj) {
       if (Boolean(obj[key])) {
